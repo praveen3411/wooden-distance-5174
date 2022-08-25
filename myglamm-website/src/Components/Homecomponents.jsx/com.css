@@ -1,0 +1,78 @@
+#textone {
+  display: inline-block;
+  height: auto;
+  margin: auto;
+  padding: 2px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(180deg, transparent 60%, #ff9797 30px);
+}
+
+.drop {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-conten {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  width: 370px;
+  height: 66px;
+  margin-top: 0px;
+  opacity: 0.7;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  z-index: 1;
+}
+
+.dropdown-conten:hover {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  width: 370px;
+  height: 150px;
+  line-height: 60px;
+  margin-top: 0px;
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  z-index: 1;
+}
+
+.drop:hover .dropdown-conten {
+  display: block;
+}
+#tone {
+  font-weight: bold;
+  font-size: 25px;
+}
+#tone:hover {
+  font-weight: bold;
+  font-size: 30px;
+}
+#ttwo {
+  font-weight: bold;
+  font-size: 17px;
+}
+#round1 {
+  width: 132px;
+  height: 132px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid rgb(247, 244, 244);
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+#round2 {
+  margin-left: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+#round3{
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}

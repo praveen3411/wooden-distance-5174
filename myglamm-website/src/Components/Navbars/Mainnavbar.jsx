@@ -1,9 +1,10 @@
+import { Box } from "@chakra-ui/react";
 import NavRoutes from "./NavRoutes";
 
 export default function MainNavbar() {
   return (
-    <div>
+    <Box>
       <NavRoutes />
-    </div>
+    </Box>
   );
 }

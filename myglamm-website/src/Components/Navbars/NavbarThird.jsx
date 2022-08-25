@@ -10,7 +10,7 @@ import Skincare from "../Hovercomponents/Skincare";
 import "./Navbar.css";
 export default function ThirdNavbar() {
   return (
-    <div id="ho">
+    <Box>
       <Box
         height={"35px"}
         width={"87%"}
@@ -102,6 +102,6 @@ export default function ThirdNavbar() {
           </Text>
         </Link>
       </Box>
-    </div>
+    </Box>
   );
 }

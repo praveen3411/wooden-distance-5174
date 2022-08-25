@@ -1,14 +1,16 @@
 import { Box, Input, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import Imagess from "../AllComponents/Images";
-import { FaShoppingBag, FaUserAlt } from "react-icons/fa";
+import { FaShoppingBag } from "react-icons/fa";
 import { GoSearch } from "react-icons/go";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import BasicUsage from "../Mainpages/Modal";
 export default function SecondNavbar() {
   const [text, setText] = useState("");
+
   return (
-    <div>
+    <Box >
       <Box
         width={"87%"}
         margin="auto"
@@ -48,12 +50,10 @@ export default function SecondNavbar() {
             </Link>
           </Text>
           <Text>
-            <Link to="/user">
-              <FaUserAlt className="c2" />
-            </Link>
+            <BasicUsage />
           </Text>
         </Box>
       </Box>
-    </div>
+    </Box>
   );
 }
