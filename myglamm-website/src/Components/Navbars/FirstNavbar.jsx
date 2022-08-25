@@ -5,7 +5,7 @@ import { BsShop } from "react-icons/bs";
 import "./Navbar.css";
 export default function FirstNavbar() {
   return (
-    <div>
+    <Box>
       <header id="header-1">
         <nav>
           <Box width={"800px"}>
@@ -31,6 +31,6 @@ export default function FirstNavbar() {
           </ul>
         </nav>
       </header>
-    </div>
+    </Box>
   );
 }
