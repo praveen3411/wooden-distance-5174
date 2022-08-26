@@ -9,6 +9,8 @@ import Two from "../Homecomponents.jsx/Hometwo";
 import Three from "../Homecomponents.jsx/Homethree";
 import Homefour from "../Homecomponents.jsx/Homefour";
 import Homefive from "../Homecomponents.jsx/Homefive";
+import Homesix from "../Homecomponents.jsx/Homesix";
+import Footer from "../Homecomponents.jsx/Footer";
 
 export default function Home() {
   const [time, settime] = useState(0);
@@ -193,9 +195,83 @@ export default function Home() {
         <Homefive />
       </Box>
       <br />
-      <br />  
+      <br />
       <Box>
         <Two names={"KITS & COMBOS"} />
+      </Box>
+      <br />
+      <Flex w={"89%"} m="auto">
+        <HStack>
+          <Box bg={"white"}>
+            <Homesix
+              src={
+                "https://files.myglamm.com/site-images/original/desktop-mk-combo.jpg"
+              }
+              name1={"Makeup Combos"}
+              name2={"Makeup Combos"}
+            />
+          </Box>
+          <Box>
+            <Homesix
+              src={
+                "https://files.myglamm.com/site-images/original/desktop-skin-combo.jpg"
+              }
+              name1={"Skincare Combos"}
+              name2={"Skincare Combos"}
+            />
+          </Box>
+          <Box>
+            <Homesix
+              src={
+                "https://files.myglamm.com/site-images/original/Desktop-combo.jpg"
+              }
+              name1={"Beauty Kits Under 499"}
+              name2={"Beauty Kits Under 499"}
+            />
+          </Box>
+        </HStack>
+      </Flex>
+      <br />
+      <Box>
+        <One
+          src={
+            "https://files.myglamm.com/site-images/original/Community-Banner-2240-x-344_1.jpg"
+          }
+        />
+      </Box>
+      <br />
+      <Box>
+        <One
+          src={
+            "https://files.myglamm.com/site-images/original/disclaimer-mgp_1.png"
+          }
+        />
+      </Box>
+      <br />
+      <Box
+        bg={"black"}
+        width={"89%"}
+        margin={"auto"}
+        height={"540"}
+        padding={"20px"}
+        boxSizing={"border-box"}
+        borderRadius={"10px"}
+      >
+        <Box ml={10}>
+          <iframe
+            width="1010"
+            height="500"
+            style={{ borderRadius: "10px" }}
+            src="https://www.youtube.com/embed/GdcxfyKNiDg"
+            title="Shraddha Kapoor Wants You To #TellMyGlammWhatYouWant | MyGlamm TV Ad"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+        </Box>
+      </Box>
+      <br />
+      <Box width={"89%"} m={"auto"}>
+        <Footer />
       </Box>
     </Box>
   );

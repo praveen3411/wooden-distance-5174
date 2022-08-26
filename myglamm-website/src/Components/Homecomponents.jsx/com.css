@@ -71,8 +71,40 @@
   margin-top: 5px;
   cursor: pointer;
 }
-#round3{
-    font-family: sans-serif;
-    font-weight: bold;
-    cursor: pointer;
+#round3 {
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+#ro:hover {
+  text-decoration: underline;
+  text-decoration-color: #ff9797;
+  font-family: sans-serif;
+}
+#ro1 {
+  color: rgb(246, 169, 182);
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+#ro2 {
+  color: #c13584;
+  font-size: 20px;
+}
+#ro3 {
+  color: #1da1f2;
+  font-size: 20px;
+}
+#ro4 {
+  color: #e60023;
+  font-size: 20px;
+}
+#ro5 {
+  color: #ff0000;
+  font-size: 20px;
+}
+#ro6{
+  padding: 10px;
+  font-family: sans-serif;
+  color: rgb(252, 207, 214);
 }

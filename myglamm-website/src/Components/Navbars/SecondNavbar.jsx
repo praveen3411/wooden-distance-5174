@@ -10,7 +10,7 @@ export default function SecondNavbar() {
   const [text, setText] = useState("");
 
   return (
-    <Box >
+    <Box>
       <Box
         width={"87%"}
         margin="auto"
