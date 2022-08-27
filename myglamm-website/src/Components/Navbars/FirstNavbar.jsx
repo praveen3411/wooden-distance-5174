@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
 import { BsShop } from "react-icons/bs";
 import "./Navbar.css";
+
 export default function FirstNavbar() {
   return (
     <Box>
@@ -17,7 +18,7 @@ export default function FirstNavbar() {
               </li>
               <li>FLAT 199 STORE</li>
               <li className="cl">
-                <Link to="/shopnow">SHOP NOW</Link>
+                <Link to="/collection">SHOP NOW</Link>
               </li>
             </ul>
           </Box>

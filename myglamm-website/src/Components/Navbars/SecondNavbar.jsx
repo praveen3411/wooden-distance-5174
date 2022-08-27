@@ -1,14 +1,15 @@
 import { Box, Input, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Imagess from "../AllComponents/Images";
 import { FaShoppingBag } from "react-icons/fa";
 import { GoSearch } from "react-icons/go";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import BasicUsage from "../Mainpages/Modal";
+import { FirstAuthContext } from "../Authentations/FirstAuth";
 export default function SecondNavbar() {
   const [text, setText] = useState("");
-
+  const { ravan } = useContext(FirstAuthContext);
   return (
     <Box>
       <Box
@@ -27,6 +28,7 @@ export default function SecondNavbar() {
             />
           </Link>
           <Input
+            ref={ravan}
             type={"text"}
             value={text}
             placeholder="Find Lipstick, Eyeliner, Makeup Tutorial, etc.."

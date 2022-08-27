@@ -103,8 +103,31 @@
   color: #ff0000;
   font-size: 20px;
 }
-#ro6{
+#ro6 {
   padding: 10px;
   font-family: sans-serif;
-  color: rgb(252, 207, 214);
+  color: rgb(245, 163, 226);
 }
+#ro6:hover{
+  color: rgb(244, 140, 183);
+}
+#r {
+  transform: translateY(-10px);
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+@keyframes pulse {
+  0% {
+    transform: translateY(10px);
+    background-color: #ff9797;
+  }
+  50% {
+    transform: translateY(20px);
+    background-color: palevioletred;
+  }
+}
+
