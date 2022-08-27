@@ -1,5 +1,6 @@
 import {
   Button,
+  FormControl,
   HStack,
   Image,
   Input,
@@ -65,19 +66,21 @@ export default function BasicUsage() {
               >
                 <option value="option1">+ 91</option>
               </Select>
-              <Input
-                isrequired
-                value={userde.numbers}
-                textAlign={"center"}
-                border="2px solid pink"
-                type={"number"}
-                placeholder="Ener Your Number"
-                name="numbers"
-                onChange={(e) => setUserde(e.target.value)}
-              />
+              <FormControl isRequired>
+                <Input
+                  isrequired
+                  value={userde.numbers}
+                  textAlign={"center"}
+                  border="2px solid pink"
+                  type={"number"}
+                  placeholder="Ener Your Number"
+                  name="numbers"
+                  onChange={(e) => setUserde(e.target.value)}
+                />
+              </FormControl>
             </HStack>
             <br />
-            <Text textAlign={"center"} fontWeight={'bold'} fontSize={'12px'}>
+            <Text textAlign={"center"} fontWeight={"bold"} fontSize={"12px"}>
               By Signing up you agree to our{" "}
               <Link to="/">Terms & Conditions</Link>
             </Text>

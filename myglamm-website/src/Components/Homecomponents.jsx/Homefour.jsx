@@ -9,7 +9,6 @@ export default function Homefour() {
     axios
       .get("http://localhost:5000/api/bestsellers")
       .then((result) => {
-        console.log(result.data);
         setBoom(result.data);
       })
       .catch((err) => {

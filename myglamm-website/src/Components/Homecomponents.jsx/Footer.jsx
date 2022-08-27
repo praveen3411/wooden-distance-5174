@@ -187,7 +187,7 @@ export default function Footer() {
       </Flex>
 
       <Box>
-        <Text id="ro6">@Developed By Praveen Kumar Yadav @copyRight 2022</Text>
+        <Text color={'blackAlpha.500'} id="ro6">@Developed By Praveen Kumar Yadav @copyRight 2022</Text>
       </Box>
     </Box>
   );
