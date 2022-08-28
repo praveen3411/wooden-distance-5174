@@ -1,5 +1,4 @@
 import {
-  Button,
   FormControl,
   HStack,
   Image,
@@ -18,6 +17,7 @@ import {
 import { useState } from "react";
 import { FaUserAlt } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import ClosingToastExample from "../AllComponents/Tamasha";
 let initail = {
   slect: "",
   numbers: "",
@@ -87,16 +87,19 @@ export default function BasicUsage() {
           </ModalBody>
 
           <ModalFooter>
-            <Button
-              onClick={savedetails}
-              color="white"
-              bgColor={"black"}
-              variant="solid"
-              width={"500px"}
-            >
-              CONTINUE
-            </Button>
+            <Link to={"/user"}>
+              <ClosingToastExample
+                onClick={savedetails}
+                color="white"
+                bgColor={"black"}
+                variant="solid"
+                width={"500px"}
+              >
+                CONTINUE
+              </ClosingToastExample>
+            </Link>
           </ModalFooter>
+          <br /> 
         </ModalContent>
       </Modal>
     </>

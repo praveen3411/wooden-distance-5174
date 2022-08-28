@@ -1,8 +1,9 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import SkinComponent from "../AllComponents/skincomponent";
 import Footer from "../Homecomponents.jsx/Footer";
 import Two from "../Homecomponents.jsx/Hometwo";
@@ -50,6 +51,18 @@ export default function Sanitizing() {
               name2={item.subname}
               rupee={item.cost}
             />
+            <Link to={`/santizing/${item.id}`}>
+              <Button
+                width="200px"
+                borderRadius={4}
+                bg={"black"}
+                color={"white"}
+                _hover={{ bg: "pink", color: "black" }}
+                mt={"-150px"}
+              >
+                CHECKOUT
+              </Button>
+            </Link>
           </Box>
         ))}
       </Box>

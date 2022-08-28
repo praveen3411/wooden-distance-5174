@@ -2,7 +2,7 @@ import { Box, Button, Center, HStack } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import SkinComponent from "../AllComponents/skincomponent";
 import Footer from "../Homecomponents.jsx/Footer";
 import Two from "../Homecomponents.jsx/Hometwo";
@@ -19,7 +19,7 @@ export default function Collection() {
   let collfunction = ({ pages, sorting, pricing }) => {
     axios
       .get(
-        `http://localhost:5000/api/collection?_page=${pages}&_limit=30&_sort=mname&_order=${sorting}&cost_gte=${pricing}`
+        `http://localhost:5000/api/collection?_page=${pages}&_limit=50&_sort=mname&_order=${sorting}&cost_gte=${pricing}`
       )
       .then((res) => {
         setColl(res.data);
@@ -91,14 +91,6 @@ export default function Collection() {
           </Button>
           <Button
             bgColor={"pink"}
-            borderRadius={"50%"}
-            onClick={() => setpages(4)}
-            fontWeight={"bold"}
-          >
-            4
-          </Button>
-          <Button
-            bgColor={"pink"}
             fontWeight={"bold"}
             onClick={() => setpricing(1000)}
           >
@@ -130,6 +122,18 @@ export default function Collection() {
               name2={item.subname}
               rupee={item.cost}
             />
+            <Link to={`/collection/${item.id}`}>
+              <Button
+                width="200px"
+                borderRadius={4}
+                bg={"black"}
+                color={"white"}
+                _hover={{ bg: "pink", color: "black" }}
+                mt={"-150px"}
+              >
+                CHECKOUT
+              </Button>
+            </Link>
           </Box>
         ))}
       </Box>
