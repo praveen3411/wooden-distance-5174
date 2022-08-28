@@ -14,11 +14,13 @@ import { useContext } from "react";
 import { useState } from "react";
 import { RiMailSendLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
+import LoginSuccess from "../AllComponents/Tamashaone";
 import { FirstAuthContext } from "../Authentations/FirstAuth";
 import FirstNavbar from "../Navbars/FirstNavbar";
 import ThirdNavbar from "../Navbars/NavbarThird";
 import SecondNavbar from "../Navbars/SecondNavbar";
 import "./Mainpages.css";
+import BasicUsage from "./Modal";
 let initail = {
   email: "",
   password: "",
@@ -40,7 +42,6 @@ export default function User() {
     })
       .then((res) => res.json())
       .then((res) => {
-        alert("Welcome To DashBoard");
         auth.isLogin(res.token);
         take("/");
       })
@@ -61,7 +62,7 @@ export default function User() {
           "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"
         }
         borderRadius="5px"
-        padding={5}
+        padding={1}
       >
         <Text id="one">
           VERIFY YOUR MOBILE NUMBER TO COMPLETE YOUR REGISTRATION
@@ -133,11 +134,19 @@ export default function User() {
               color={"white"}
               onClick={savingdata}
               fontWeight={"bold"}
+              _hover={{ bg: "pink", color: "black" }}
             >
-              LOGIN HERE
+              <LoginSuccess />
             </Button>
           </FormControl>
         </Box>
+          <HStack spacing={5} ml={'200px'} mt={3}>
+            <Text fontWeight={'bold'}>Are You Fresh ? Create  Account</Text>
+            <Text fontSize={'30px'} colorScheme={'green'}>
+              <BasicUsage/>{" "}
+            </Text>
+          </HStack>
+        
       </Box>
     </Box>
   );

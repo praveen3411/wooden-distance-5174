@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import FirstNavbar from "../Navbars/FirstNavbar";
 import ThirdNavbar from "../Navbars/NavbarThird";
 import SecondNavbar from "../Navbars/SecondNavbar";
@@ -8,13 +8,13 @@ import { useEffect } from "react";
 import axios from "axios";
 import SkinComponent from "../AllComponents/skincomponent";
 import Footer from "../Homecomponents.jsx/Footer";
+import { Link } from "react-router-dom";
 export default function Makeup() {
   const [dom, setDom] = useState([]);
   let functiontwo = () => {
     axios
       .get(`http://localhost:5000/api/makeup`)
       .then((res) => {
-        console.log(res.data);
         setDom(res.data);
       })
       .catch((error) => {
@@ -49,6 +49,18 @@ export default function Makeup() {
               name2={item.subname}
               rupee={item.cost}
             />
+            <Link to={`/makeup/${item.id}`}>
+              <Button
+                width="200px"
+                borderRadius={4}
+                bg={"black"}
+                color={"white"}
+                _hover={{ bg: "pink", color: "black" }}
+                mt={"-150px"}
+              >
+                CHECKOUT
+              </Button>
+            </Link>
           </Box>
         ))}
       </Box>
